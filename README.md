@@ -94,8 +94,7 @@ plt.show()
 
 ### **Step 4: Draw a Rectangle**
 ```python
-rectangle_img = cv2.rectangle(
-img_rgb,(0,0),(768,600),(0,0,255),10)
+rectangle_img = cv2.rectangle(img_rgb,(0,0),(768,600),(0,0,255),10)
 plt.imshow(rectangle_img)
 plt.title("Image with Rectangle")
 plt.axis('off')
@@ -131,11 +130,7 @@ plt.show()
 
 ### **Step 8: Convert RGB to YCrCb**
 ```python
-image_ycrcb = cv2.cvtColor(
-img_rgb,
-cv2.COLOR_RGB2YCrCb
-)
-
+image_ycrcb = cv2.cvtColor(img_rgb,cv2.COLOR_RGB2YCrCb)
 plt.imshow(image_ycrcb)
 plt.title("YCrCb Image")
 plt.axis('off')
@@ -144,84 +139,47 @@ plt.show()
 
 ### **Step 9: Convert HSV back to RGB**
 ```python
-image_hsv_to_rgb = cv2.cvtColor(
-image_hsv,
-cv2.COLOR_HSV2RGB
-)
+image_hsv_to_rgb = cv2.cvtColor(image_hsv,cv2.COLOR_HSV2RGB)
 ```
 
 ### **Step 10: Modify Pixel Block**
 ```python
 img[200:500,200:500]=[255,255,255]
-
-plt.imshow(cv2.cvtColor(
-img,
-cv2.COLOR_BGR2RGB
-))
+plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
 ### **Step 11: Resize Image**
 ```python
-resized_image=cv2.resize(
-img,
-(768//2,600//2)
-)
-
-plt.imshow(
-cv2.cvtColor(
-resized_image,
-cv2.COLOR_BGR2RGB
-)
-)
+resized_image=cv2.resize(img,(768//2,600//2))
+plt.imshow(cv2.cvtColor(resized_image,cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
 ### **Step 12: Crop ROI**
 ```python
 roi=img[50:350,50:350]
-
-plt.imshow(
-cv2.cvtColor(
-roi,
-cv2.COLOR_BGR2RGB
-)
-)
+plt.imshow(cv2.cvtColor(roi,cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
 ### **Step 13: Flip Horizontally**
 ```python
 flipped_horizontally=cv2.flip(img,1)
-
-plt.imshow(
-cv2.cvtColor(
-flipped_horizontally,
-cv2.COLOR_BGR2RGB
-)
-)
+plt.imshow(cv2.cvtColor(flipped_horizontally,cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
 ### **Step 14: Flip Vertically**
 ```python
 flipped_vertically=cv2.flip(img,0)
-
-plt.imshow(
-cv2.cvtColor(
-flipped_vertically,
-cv2.COLOR_BGR2RGB
-)
-)
+plt.imshow(cv2.cvtColor(flipped_vertically,cv2.COLOR_BGR2RGB))
 plt.show()
 ```
 
 ### **Step 15: Save Final Image**
 ```python
-cv2.imwrite(
-"final_output.jpg",
-flipped_horizontally
-)
+cv2.imwrite("final_output.jpg",flipped_horizontally)
 ```
 
 ## OUTPUT
